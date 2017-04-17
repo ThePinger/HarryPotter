@@ -5,6 +5,8 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -18,7 +20,7 @@ public class LauncherController implements ActionListener {
 	private MainLauncher mainLauncher;
 	private PreGameLauncher preGameLauncher;
 	
-	public LauncherController() throws IOException{
+	public LauncherController() throws IOException, LineUnavailableException, UnsupportedAudioFileException{
 		// Initialize MainLauncher
 		mainLauncher = new MainLauncher();
 		ArrayList <JButton>btns = new ArrayList<JButton>();
@@ -42,6 +44,7 @@ public class LauncherController implements ActionListener {
 		mainLauncher.setVisible(true);
 		launcher = new Launcher();
 		launcher.addPanel(mainLauncher);
+		launcher.addAudio();
 	}
 	
 	@Override
@@ -82,7 +85,7 @@ public class LauncherController implements ActionListener {
 		preGameLauncher.setVisible(true); 
 		launcher.addPanel(preGameLauncher);
 	}
-	public static void main(String [] args) throws IOException{
+	public static void main(String [] args) throws IOException, LineUnavailableException, UnsupportedAudioFileException{
 		new LauncherController();
 	}
 
