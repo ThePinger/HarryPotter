@@ -27,9 +27,15 @@ public class LauncherController implements ActionListener {
 		// DragonInto gif
 		ImageIcon dragonintroimg = (new ImageIcon("DragonIntro.gif"));
 		JButton dragonintrobtn = new JButton(dragonintroimg);
-		dragonintrobtn.setBounds(20,40, dragonintroimg.getIconWidth(), dragonintroimg.getIconHeight());
+		dragonintrobtn.setBounds(300,10, dragonintroimg.getIconWidth(), dragonintroimg.getIconHeight());
 		dragonintrobtn.setBorder(BorderFactory.createEmptyBorder());
 		dragonintrobtn.setContentAreaFilled(false);
+		// HarryPotter Logo
+		ImageIcon harrypotterlogoimg = (new ImageIcon("HPlogo.png"));
+		JButton harrypotterlogobtn = new JButton(harrypotterlogoimg);
+		harrypotterlogobtn.setBounds(20,40, harrypotterlogoimg.getIconWidth(), harrypotterlogoimg.getIconHeight());
+		harrypotterlogobtn.setBorder(BorderFactory.createEmptyBorder());
+		harrypotterlogobtn.setContentAreaFilled(false);
 		// NewGameButton
 		ImageIcon newgameimg = (new ImageIcon("NewGameButton.png"));
 		JButton newgamebtn = new JButton(newgameimg);
@@ -39,6 +45,7 @@ public class LauncherController implements ActionListener {
 		newgamebtn.setName("NewGameButton");
 		newgamebtn.addActionListener(this);
 		btns.add(dragonintrobtn);
+		btns.add(harrypotterlogobtn);
 		btns.add(newgamebtn);
 		mainLauncher.addButtons(btns);
 		mainLauncher.setVisible(true);
@@ -62,14 +69,14 @@ public class LauncherController implements ActionListener {
 		mainLauncher.removeAll();
 		mainLauncher.revalidate();
 		preGameLauncher = new PreGameLauncher();
-		ImageIcon hufflepuffimg = (new ImageIcon("Hufflepuff.jpg"));
-		JButton hufflepuffbtn = new JButton(hufflepuffimg);
-		hufflepuffbtn.setBounds(20,200, hufflepuffimg.getIconWidth(), hufflepuffimg.getIconHeight());
-		hufflepuffbtn.setBorder(BorderFactory.createEmptyBorder());
-		hufflepuffbtn.setContentAreaFilled(false);
-		hufflepuffbtn.setName("HufflepuffButton");
-		hufflepuffbtn.addActionListener(this);
-		preGameLauncher.addButtons(hufflepuffbtn);
+		ImageIcon ravenclawimg = (new ImageIcon("RavenClaw.png"));
+		JButton ravenclawbtn = new JButton(ravenclawimg);
+		ravenclawbtn.setBounds(20,200, ravenclawimg.getIconWidth(), ravenclawimg.getIconHeight());
+		ravenclawbtn.setBorder(BorderFactory.createEmptyBorder());
+		ravenclawbtn.setContentAreaFilled(false);
+		ravenclawbtn.setName("RavenClawButton");
+		ravenclawbtn.addActionListener(this);
+		preGameLauncher.addButtons(ravenclawbtn);
 		// CreateButtonGlow Image
 		ImageIcon createbuttonglowimg = (new ImageIcon("CreateButtonGlow.png"));
 		// CreateButton Button
